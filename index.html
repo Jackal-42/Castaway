@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Castaway</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />    
+  </head>
+  <body>
+    <div id="debugMenu" style="display: none;">
+      <h2 style="font-size: 32px; text-align: center;">Debug</h2>
+      <p>Player X: <span name="playerXpos"></span></p>
+      <p>Player Y: <span name="playerYpos"></span></p>
+      <p>Object Count: <span name="objectCount"></span></p>
+      <p>Frames Elapsed: <span name="framesElapsed"></span></p>
+      <p><span name="displayedImage"></span></p>
+
+      
+    </div>
+
+    <div id="inventory" style="display: none;"><h1 style="text-align: center; font-size: 32px;">Inventory</h1><hr></br><ul id="inventorySlots" style="font-size: 16px; margin: 0px; list-style-type: none; padding: 0px;"></ul></div>
+    <div id="cheatCodes" style="display: none;"><h1 style="text-align: center; font-size: 32px;">Cheats</h1><hr></br><ul id="inventorySlots" style="font-size: 16px; margin: 0px; list-style-type: none; padding: 0px;">
+      <li>Player Speed: <input type="number" id="playerSpeed" min="0" max="100" value="5"></li>
+      <li>Jump Power: <input type="number" id="jumpPower" min="0" max="100" value="10"></li>
+      <li>Damage: <input type="number" id="damage" min="0" max="100" value="10"></li>
+      
+      
+      
+      
+      
+    </ul></div>
+
+    <div id="textBoxContainer" style="display: none;"><span id="textBoxImage"></span><span id="textBox" style="position: absolute; right: 0px; left: 0px; font-size: 24px;"></span><span id="zPrompt">Z</span></div>
+
+    <canvas id="board" class="canvas" name="canvas" style="z-index: 2; display: none;" onclick="pickCard(event)"></canvas>
+    <canvas id="canvas" class="canvas" name="canvas"></canvas>
+    <canvas id="level" class="canvas" name="canvas" style="z-index: -1;"></canvas>
+    <canvas id="background" class="canvas" name="canvas" style="z-index: -2; background-color: black;"></canvas>
+    <canvas id="circleCanvas" width="200px" height="200px"></canvas>
+    <p id="prompt">Loading...</p>
+    
+    <script src="audio.js"></script>
+
+    <script src="images.js"></script>
+
+    <script src="loader.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
